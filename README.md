@@ -1,3 +1,3 @@
-# k6-performance-testing
+# SATC k6 Performance Testing
 
-Performance test with Grafana K6
+Este repositório contém a solução para a atividade avaliativa da disciplina de automação de testes, utilizando **k6** para realizar testes de performance na API de homologação do portal de notícias **Engeplus**.

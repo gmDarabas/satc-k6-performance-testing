@@ -4,9 +4,8 @@ import http from 'k6/http';
 import { check } from 'k6';
 import { Trend, Rate } from 'k6/metrics';
 
-export const getContactsDuration = new Trend('get_contacts', true);
+export const getCapaDuration = new Trend('get_capa', true);
 export const RateContentOK = new Rate('content_OK');
-export const getDurationTrend = new Trend('get_duration')
 
 export const options = {
   thresholds: {
@@ -52,8 +51,7 @@ export default function () {
 
   const res = http.get(`${baseUrl}`, params);
 
-  getContactsDuration.add(res.timings.duration);
-  getDurationTrend.add(res.timings.duration);
+  getCapaDuration.add(res.timings.duration);
   RateContentOK.add(res.status === OK);
 
   check(res, {
