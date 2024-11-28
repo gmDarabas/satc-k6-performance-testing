@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const reportPath = 'report.json';
+const reportPath = 'reports/report.json';
 const readmePath = 'README.md';
 
 const extractMetrics = () => {
