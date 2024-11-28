@@ -20,7 +20,7 @@ jobs:
       - name: Run K6 test and save report
         run: |
           mkdir -p reports
-          k6 run --out json=reports/report.json src/tests/test.js
+          k6 run --out json=reports/report.json src/tests/Tests.spec.js
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
